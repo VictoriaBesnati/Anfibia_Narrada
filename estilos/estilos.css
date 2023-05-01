@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "Tungsten";
+  src: url("../assets/fuente/Tungsten_Font/@font-face/fuente.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../assets/fuente/Merriweather/Merriweather-Regular.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../assets/fuente/Merriweather/Merriweather-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../assets/fuente/Merriweather/Merriweather-Light.ttf") format("ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #F7F8F9;
+  font-size: 10px;
+  font-family: "Merriweather", serif;      
+}
+section{
+  padding: 3.4rem;
+}
+
+h1 {
+  font-family: "Tungsten", sans-serif;
+  font-weight: bold;
+  font-size: 8.4rem;
+  position: relative;
+  color: #141916;
+}
+
+h2 {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  position: relative;
+  color: #141916;
+}
+h3{
+  font-family: "Tungsten", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  color: #141916;
+}
+h4{
+  font-family: "Tungsten", sans-serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  position: relative;
+  color: #141916;
+}
+p{
+  font-family: "Merriweather", serif;
+  font-size: 1.6rem;
+  position: relative;
+  color: #141916;
+}
+b{
+  font-weight: bold;
+}
+.blanco{
+  color: #F7F8F9;
+}
+header {
+  background-color: #141916;
+  padding: 0.2rem 3.2rem;
+}
+#cta{
+  position: relative;
+  margin: 2.5rem 0px;
+  background-color: #6653FF;
+  font-family: "Tungsten", sans-serif;
+  font-size: 3rem;
+  color: #F7F8F9;
+  padding: 1.5rem 2rem;
+}
+.separador{
+  height: 1rem;
+  width: 100%;
+  background-color: #FFB5A9;
+  margin: 4rem 0;
+}
+.espacio{
+  margin-top: 6rem;
+}
+.portada {
+  position: relative;
+  background-image: url("../assets/img/Portada-Desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem 20rem 2rem 3.2rem;
+  color: #F7F8F9;
+}
+.portada::before{
+  position: absolute;
+  content: " ";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);;
+
+}
+.bullet{
+  display: flex;
+  gap: 1.6rem;
+  padding: 2rem 0rem;
+}
+.col-7{
+  max-width: 70%;
+}
+.seccion-2{
+  background-color: #6400B0;
+}
+.seccion-2> .titulo{
+  display: flex;
+  align-items: baseline;
+  gap: 3rem;
+}
+.seccion-2 > .titulo> .espacio{
+  width: 80%;
+}
+.seccion-2 > .contenido{
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+.seccion-2 > .contenido > div{
+max-width: 33%;
+}
+.seccion-2 > .contenido > div > h4 {
+  margin-bottom: 2rem;
+}
+.seccion-2 > .img{
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+}
+.seccion-2 > .img > img{
+  width: 100%;
+}
+.seccion-2 > .final{
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+.seccion-2 > .final > .separador{
+width: 30%;
+}
+.seccion-2 > .final > h4{
+text-align: center;
+}
+
+.seccion-3{
+display: flex;
+gap: 2rem;
+}
+.seccion-3 > .contenido{
+  width: 60%;
+}
+.img-2{
+  height: 100%;
+}
+.img-2 > img{
+  width: 100%;
+  height: 66vw;
+}
+.seccion-3 > .contenido > h4{
+  padding-bottom: 3rem;
+}
+.seccion-3 > .contenido > p{
+  padding-bottom: 2rem;
+}
