@@ -25,6 +25,29 @@
   font-weight: lighter;
   font-style: normal;
 }
+:root{
+  /*--- Paleta ---*/
+  --blanco:#F7F8F9;
+  --negro:#141916;
+  --azul:#6653FF;
+  --violeta:#6400B0;
+  --rosa: #FFB5A9;
+  --bordo:#601616;
+  /*--- Tipografia ---*/
+  --small:2rem;
+  --medium:2.4rem;
+  --large:3.2rem;
+  --xlarge:4rem;
+  --jumbo:4.8rem;
+  --display:12.8rem;
+  /*--- Espacios ---*/
+  --space-margen:11.2rem;
+  --space-enorme:10.4rem;
+  --space-grande:9.6rem;
+  --space-mediano:6.2rem;
+  --space-intermedio:3.2rem;
+  --space-chico:2.4rem;
+}
 html{
   font-size: 10px;
 }
@@ -42,110 +65,103 @@ ul {
 }
 
 body {
-  background-color: #F7F8F9;
+  background-color: var(--blanco);
   font-family: "Merriweather", serif;      
 }
 section{
-  padding: 11.2rem;
+  padding: var(--space-margen);
 }
 
 h1 {
   font-family: "Tungsten", sans-serif;
   font-weight: bold;
-  font-size: 12.8rem;
+  font-size: var(--display);
   position: relative;
-  color: #141916;
+  color: var(--negro);
 }
 
 h2 {
   font-family: "Merriweather", serif;
-  font-size: 2.4rem;
+  font-size: var(--medium);
   position: relative;
-  color: #141916;
+  color: var(--negro);
 }
 h3{
   font-family: "Tungsten", sans-serif;
-  font-size: 4.8rem;
+  font-size: var(--jumbo);
   font-weight: bold;
   position: relative;
-  color: #141916;
+  color: var(--negro);
 }
 h4{
   font-family: "Tungsten", sans-serif;
-  font-size: 3.2rem;
+  font-size: var(--large);
   font-weight: bold;
   position: relative;
-  color: #141916;
+  color: var(--negro);
 }
 p{
   font-family: "Merriweather", serif;
-  font-size: 2rem;
+  font-size: var(--small);
   position: relative;
-  color: #141916;
+  color: var(--negro);
 }
 b{
   font-weight: bold;
 }
 .blanco{
-  color: #F7F8F9;
+  color: var(--blanco);
 }
 header {
-  background-color: #141916;
-  padding: 1rem 11.2rem;
+  background-color: var(--negro);
+  padding: 1rem var(--space-margen);
 }
 #cta{
   position: relative;
-  margin: 2.5rem 0px;
-  background-color: #6653FF;
+  background-color: var(--azul);
   font-family: "Tungsten", sans-serif;
-  font-size: 4.8rem;
-  color: #F7F8F9;
+  font-size: var(--jumbo);
+  color: var(--blanco);
   padding: 2rem 4rem;
 }
 .separador{
   height: 2rem;
   width: 100%;
-  background-color: #FFB5A9;
-}
-.espacio-arriba{
-  margin-top: 10.4rem;
-}
-.espacio-abajo-2{
-  margin-bottom: 5.8rem;
-}
-.espacio-arriba-2{
-  margin-top: 5.8rem;
-}
-.espacio-abajo{
-  margin-bottom: 10.4rem;
+  background-color: var(--rosa);
 }
 .portada {
   position: relative;
   background-image: url("../assets/img/Portada-Desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 12.8rem 0rem 12.8rem 11.2rem;
-  color: #F7F8F9;
+  padding: var(--space-enorme) 0rem var(--space-enorme) var(--space-margen);
+  color: var(--blanco);
 }
 .portada::before{
   position: absolute;
   content: " ";
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-.portada> h1{
-  padding-bottom:2.4rem;
+.portada > h1{
+  padding-bottom:var(--space-chico);
+  max-width: 60%;
+}
+.portada > h2{
+  padding-bottom: var(--space-mediano);
+  max-width: 55%;
+}
+.portada > #cta{
+margin-bottom: var(--space-enorme);
+}
+.seccion-1 > .separador{
+  margin-top: var(--space-mediano);
+  margin-bottom: var(--space-mediano);
 }
 .bullet{
   display: flex;
-  gap: 3.2rem;
-  padding: 4rem 0rem;
-}
-.col-6{
-  max-width: 60%;
-}
-.col-5{
-  max-width: 55%;
+  gap: var(--space-mediano);
+  padding: var(--space-intermedio) 0rem;
 }
 .seccion-2{
   background-color: #6400B0;
@@ -153,34 +169,41 @@ header {
 .seccion-2 > .titulo{
   display: flex;
   align-items: baseline;
-  gap: 3.2rem;
+  gap: var(--space-intermedio);
+  padding: var(--space-enorme) 0px;
 }
-.seccion-2 > .titulo > .espacio-arriba{
+.seccion-2 > .titulo > h3{
   width: 100%;
+}
+.seccion-2 > .titulo > .separador{
+  width: 50%;
 }
 .seccion-2 > .contenido{
   margin-top: 2rem;
   display: flex;
-  gap: 3rem;
+  gap: var(--space-intermedio);
 }
 .seccion-2 > .contenido > div{
 max-width: 33%;
 }
-.seccion-2 > .contenido > div > h4 {
-  margin-bottom: 2rem;
+.seccion-2 > .contenido > div > h4{
+  margin-bottom: var(--space-chico);
+}
+.seccion-2 > .contenido > div > p{
+  margin-bottom: var(--space-mediano);
 }
 .seccion-2 > .img{
   display: flex;
   align-items: center;
-  padding-top: 4rem;
 }
 .seccion-2 > .img > img{
   width: 100%;
 }
 .seccion-2 > .final{
+  padding-top: var(--space-grande);
   display: flex;
   align-items: baseline;
-  gap: 2rem;
+  gap: var(--space-chico);
 }
 .seccion-2 > .final > .separador{
 width: 30%;
@@ -191,7 +214,7 @@ text-align: center;
 
 .seccion-3{
 display: flex;
-gap: 3.2rem;
+gap: var(--space-intermedio);
 }
 .seccion-3 > .contenido{
   width: 60%;
@@ -201,11 +224,15 @@ gap: 3.2rem;
 }
 .img-2 > img{
   width: 100%;
-  height: 50vw;
+  height: 55vw;
 }
 .seccion-3 > .contenido > h4{
-  padding-bottom: 4.8rem;
+  padding-bottom: var(--space-chico);
 }
 .seccion-3 > .contenido > p{
-  padding-bottom: 3.2rem;
+  padding-bottom: var(--space-chico);
+}
+.seccion-3 > .contenido > #cta{
+  
+  padding-top: var(--space-grande);
 }
