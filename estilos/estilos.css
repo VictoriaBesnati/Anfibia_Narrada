@@ -147,6 +147,10 @@ header {
   padding: 1rem var(--space-margen);
 }
 
+.oculto {
+  display: none;
+}
+
 .cta {
   position: relative;
   background-color: var(--azul);
@@ -156,6 +160,10 @@ header {
   letter-spacing: 0.4rem;
   color: var(--blanco);
   padding: 2rem 4rem;
+}
+
+.cta:hover {
+  outline: 4px solid var(--azul);
 }
 
 .separador {
@@ -211,9 +219,45 @@ header {
   padding: var(--space-intermedio) 0rem;
 }
 
+.bullet {
+  display: flex;
+  gap: var(--space-mediano);
+  flex: 1 1 60vw;
+  align-items: center;
+  padding: var(--space-intermedio) 0rem;
+}
+
+.bullet:hover .animacion {
+  animation: rotar 2s ease;
+}
+
 .bullet>img {
   max-width: 8vw;
   max-height: 8vw;
+}
+
+.animacion:hover {
+  animation: rotar 4s ease;
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+    max-width: 8vw;
+    max-height: 8vw;
+  }
+
+  50% {
+    transform: rotate(359deg);
+    max-width: 8.4vw;
+    max-height: 8.4vw;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    max-width: 8vw;
+    max-height: 8vw;
+  }
 }
 
 /*--- Seccion 2 ---- */
@@ -256,13 +300,61 @@ header {
   margin-bottom: var(--space-chico);
 }
 
-.seccion-2>.img {
-  display: flex;
-  align-items: center;
+.seccion-2>.slider {
+  width: 100%;
+  height: 60rem;
+  margin: auto;
+  overflow: hidden;
 }
 
-.seccion-2>.img>img {
+.seccion-2>.slider>ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slider 20s infinite alternate;
+}
+
+.seccion-2>.slider>ul>li {
   width: 100%;
+  list-style: none;
+}
+
+.seccion-2>.slider>ul>li>img {
+  width: 100%;
+}
+
+@keyframes slider {
+  0% {
+    margin-left: 0;
+  }
+
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+
+  100% {
+    margin-left: -300%;
+  }
 }
 
 .seccion-2>.final {
@@ -407,7 +499,7 @@ form>input {
 }
 
 form>input:last-child {
-  width: 30vw;
+  width: 32vw;
   padding: 1rem;
 }
 
@@ -420,16 +512,53 @@ form>select {
   padding: 1rem;
   margin-bottom: var(--space-intermedio);
   font-family: "Merriweather", serif;
-  font-size: 1.6rem;
-  width: 30vw;
+  color: gray;
+  font-size: 1.8rem;
+  width: 32vw;
 }
-select:focus{
+
+select:focus {
   outline: 3px solid var(--azul);
 }
+
 form>select>option {
   font-family: "Merriweather", serif;
   font-size: 1.8rem;
   background-color: var(--blanco);
+}
+
+form>select>option:hover::after {
+  background-color: var(--violeta);
+}
+
+/*--- Formulario Completo ---- */
+.formulario-completo {
+  background-color: var(--rosa);
+  display: flex;
+  gap: var(--space-mediano);
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--space-enorme) 20vw;
+}
+
+.formulario-completo>.contenido {
+  flex: 1 2 30vw;
+  max-width: 30vw;
+}
+
+.formulario-completo>div>h2 {
+  font-family: "Tungsten", sans-serif;
+  font-size: var(--display);
+  font-weight: bold;
+}
+
+.formulario-completo>div>img {
+  flex: 2 1 20vw;
+  max-width: 20vw;
+}
+
+span {
+  font-weight: bold;
 }
 
 /*--- Footer ---- */
@@ -445,6 +574,10 @@ footer {
 
 footer>p {
   text-align: center;
+}
+
+.oculto {
+  display: none;
 }
 
 /*--------- MOBILE ---------- */
@@ -505,10 +638,12 @@ footer>p {
     gap: var(--space-medianom);
     padding: var(--space-intermediom) 0rem;
   }
+
   .bullet>img {
     max-width: 16vw;
     max-height: 16vw;
   }
+
   /*--------- Seccion 2 ---------- */
   .seccion-2 {
     padding-top: var(--space-enormem);
@@ -528,12 +663,13 @@ footer>p {
     padding-bottom: var(--space-medianom);
   }
 
-  .seccion-2>.final {
-    display: none;
+  .seccion-2>.slider {
+    width: 100%;
+    height: 30rem;
   }
 
-  .img {
-    margin-bottom: var(--space-intermediom);
+  .seccion-2>.final {
+    display: none;
   }
 
   /*--------- Seccion 3 ---------- */
@@ -575,6 +711,7 @@ footer>p {
     margin-bottom: var(--space-medianom);
   }
 
+  /*--------- Formulario ---------- */
   form>input {
     padding: 1rem;
     width: 90%;
@@ -592,9 +729,20 @@ footer>p {
     width: 92%;
   }
 
-  /*
-    form>select>option {
+  /*--------- Formulario Completo ---------- */
+  .formulario-completo>.contenido {
+    flex: 1 2 60vw;
+    max-width: 60vw;
+  }
 
-    }
-    */
+  .formulario-completo>div>h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .formulario-completo>div>img {
+    flex: 2 1 60vw;
+    max-width: 60vw;
+  }
+
 }
